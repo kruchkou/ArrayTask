@@ -64,12 +64,13 @@ public class Task3 {
     }
 
     public static void main(String[] args) {
-        int[] lockRow = new int[10];
-        int firstDicePos = randomNum(0, 9);
+        final int LOCK_SIZE = 10;
+        int[] lockRow = new int[LOCK_SIZE];
+        int firstDicePos = randomNum(0, LOCK_SIZE-1);
         int secondDicePos;
 
         do {
-            secondDicePos = randomNum(0, 9);
+            secondDicePos = randomNum(0, LOCK_SIZE-1);
         } while (firstDicePos == secondDicePos);
 
         lockRow[firstDicePos] = randomNum(1, 6);

@@ -2,7 +2,7 @@ package by.epamte.task1;
 
 public class Task1 {
 
-    private static double getMaxSum(double[] elementArray) {
+    private static double maxSum(double[] elementArray) {
         final int ARRAY_SIZE = elementArray.length - 1;
         double maxSum = Double.MIN_VALUE;
 
@@ -18,7 +18,7 @@ public class Task1 {
     public static void main(String[] args) {
         double[] elementArray = {-16, 2, -4, 4, 6, 10, 8, -9, 5};
 
-        double max = getMaxSum(elementArray);
+        double max = maxSum(elementArray);
 
         System.out.println("MAX = " + max);
     }

@@ -2,7 +2,7 @@ package by.epamte.task4;
 
 public class Task4 {
 
-    private static int getElementQuantity(int number, int[] elementArray) {
+    private static int elementQuantity(int number, int[] elementArray) {
         int quantity = 0;
         for (int element : elementArray) {
             quantity = element == number ? ++quantity : quantity;
@@ -10,12 +10,12 @@ public class Task4 {
         return quantity;
     }
 
-    private static int getMostFrequentNums(int[] elementArray) {
+    private static int mostFrequentNums(int[] elementArray) {
         int maxQuantity = 0;
         int elemWithMaxQuantity = Integer.MAX_VALUE;
 
         for (int element : elementArray) {
-            int elementQuantity = getElementQuantity(element, elementArray);
+            int elementQuantity = elementQuantity(element, elementArray);
 
             if (elementQuantity > maxQuantity) {
                 maxQuantity = elementQuantity;
@@ -32,7 +32,7 @@ public class Task4 {
     public static void main(String[] args) {
         int[] elementArray = {-4, 2, -16, -4, -16, -16, 8, -4, 5};
 
-        int mostFrequentElement = getMostFrequentNums(elementArray);
+        int mostFrequentElement = mostFrequentNums(elementArray);
 
         System.out.println("Most Frequent element: " + mostFrequentElement);
 
